@@ -348,7 +348,11 @@ a {
 }
 
 .main-info__icons-text-descr {
-  margin-right: 31px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  padding-right: 0px;
 }
 
 @media (min-width: 768px) and (max-width: 1119px) {
