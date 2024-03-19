@@ -336,7 +336,7 @@ a {
   }
 }
 
-@media (min-width: 1120px) and (max-width: 1192px) {
+@media (min-width: 1120px) {
   .main-info__menu-ul-item:last-child {
     margin-left: 20px;
     margin-top: 10px;
@@ -386,4 +386,35 @@ a {
 
 .main-info__pic-320 {
   width: -webkit-fill-available;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-info,
+.head {
+  width: 100%;
+  max-width: 1120px;
+}
+
+/* тут по дефолту прописываешь стили для мобилки */
+body {
+  background-color: green;
+}
+
+@media (min-width: 768px) {
+  /* здесь все правила для мобильной версии */
+  body {
+    background-color: tomato;
+  }
+}
+
+@media (min-width: 1120px) {
+  /* здесь все правила для мобильной версии */
+  body {
+    background-color: aqua;
+  }
 }
