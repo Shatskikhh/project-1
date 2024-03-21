@@ -40,10 +40,8 @@ ul {
 
 .head__info-left::after {
   content: "";
-  /* display: block; */
   width: 1px;
   background-color: #eaeaea;
-  /* border: 1px solid; */
   height: 35px;
   position: relative;
   left: 5px;
@@ -203,49 +201,119 @@ a {
   }
 }
 
-@media (min-width: 768px) {
-  .main-info__pic-320,
-  .main-info__pic-1120 {
-    display: none;
-  }
-}
-
-@media (min-width: 1119px) {
-  .main-info__pic-320,
-  .main-info__pic-768 {
-    display: none;
-  }
-}
-
-.main-info__pic-768,
-.main-info__pic-1120 {
-  display: none;
-}
-
 .main-info__pic-768 {
   display: block;
   border-radius: 7px;
-  /* margin-top: 27px; */
   margin-bottom: 27px;
   max-width: 100%;
 }
 
-@media (min-width: 767px) {
+@media (max-width: 1119px) {
+  .main-info__menu-ul-item:nth-child(1) {
+    display: none;
+  }
+
+  .main-info__menu-ul-item:nth-child(5) {
+    display: none;
+  }
+
+  .main-info__final-text,
+  .main-info__icons {
+    display: none;
+  }
+
+  .main-info__menu-ul-item:nth-child(2) {
+    color: #b8ffec;
+    border: 2px solid;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 17px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: -7px;
+  }
+
+  .main-info {
+    border-top: 1px solid;
+    border-color: #b8ffec;
+  }
+  .main-info__menu-ul {
+    gap: 25.38px;
+    margin-left: 25px;
+  }
+}
+
+.main-info__icons-text {
+  margin-right: 10px;
+}
+
+.main-info__icons-text-descr {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  padding-right: 0px;
+}
+
+.main-info__icons {
+  margin-left: 450px;
+}
+
+.main-info__pic-320 {
+  width: -webkit-fill-available;
+}
+
+.main-info,
+.head {
+  width: 100%;
+  max-width: 1120px;
+}
+
+/* тут по дефолту прописываешь стили для мобилки */
+body {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* здесь все правила для планшетной версии */
+@media (min-width: 768px) {
+  .head__info-left::after {
+    display: none;
+  }
+
   .main-info__main-menu {
     min-width: 768px;
   }
 
-  .head__info-right-disp768,
-  .head__info-chat {
-    display: block;
+  body {
+    background-color: tomato;
   }
 
-  .head__info-left-disp320::after {
+  .main-info {
+    margin-right: 15px;
+  }
+
+  .main-info__text {
+    margin: 0;
+    width: 312px;
+  }
+
+  .main-info__photo {
+    width: 360px;
+  }
+
+  .main-info__main-menu {
+    margin-top: 32px;
+  }
+
+  .head__info-left-disp768::before {
     content: "";
-    /* display: block; */
     width: 1px;
     background-color: #eaeaea;
-    /* border: 1px solid; */
     height: 35px;
     position: relative;
     left: 25px;
@@ -255,16 +323,76 @@ a {
   .head__info-left-disp768 {
     margin-left: 30px;
   }
-}
 
-@media (min-width: 880px) {
+  .head__info-left-disp320::after {
+    content: "";
+    width: 1px;
+    background-color: #eaeaea;
+    height: 35px;
+    position: relative;
+    left: 25px;
+    bottom: 10px;
+  }
+
+  .head__info-right-disp768,
+  .head__info-chat {
+    display: block;
+  }
+
+  .main-info__cps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 16px;
+  }
+
+  .head__info-right-request::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    background-color: #eaeaea;
+    /* border: 1px solid; */
+    height: 35px;
+    position: relative;
+    left: -14px;
+    bottom: 10px;
+  }
+
+  .head__info-right-request {
+    margin-left: 20px;
+  }
+
+  .head__info-left::before {
+    content: "";
+    /* display: block; */
+    width: 1px;
+    background-color: #eaeaea;
+    /* border: 1px solid; */
+    height: 35px;
+    position: relative;
+    left: 80px;
+    bottom: 10px;
+  }
+}
+/* здесь все правила для десктопной версии */
+@media (min-width: 1120px) {
+  body {
+    background-color: aqua;
+  }
+
+  .head__info-left-disp768::before {
+    display: none;
+  }
+
   .main-info__text {
     width: 500px;
     font-size: 14px;
   }
-}
 
-@media (min-width: 1120px) {
   .main-info__icons {
     display: flex;
     align-items: center;
@@ -326,181 +454,9 @@ a {
     display: flex;
     justify-content: space-between;
   }
-}
 
-@media (max-width: 783px) {
-  .main-info__hidden-text,
-  .main-info__visible-text,
-  .main-info__visible-text-block {
-    padding: 0px;
-  }
-}
-
-@media (max-width: 1119px) {
-  .main-info__menu-ul-item:nth-child(1) {
-    display: none;
-  }
-
-  .main-info__menu-ul-item:nth-child(5) {
-    display: none;
-  }
-
-  .main-info__final-text,
-  .main-info__icons {
-    display: none;
-  }
-
-  .main-info__menu-ul-item:nth-child(2) {
-    color: #b8ffec;
-    border: 2px solid;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0px;
-    padding: 17px;
-    height: 40px;
-    box-sizing: border-box;
-    margin-top: -7px;
-  }
-
-  .main-info {
-    border-top: 1px solid;
-    border-color: #b8ffec;
-  }
-  .main-info__menu-ul {
-    gap: 25.38px;
-    margin-left: 25px;
-  }
-}
-
-@media (min-width: 1120px) {
   .main-info__menu-ul-item:last-child {
     margin-left: 20px;
     margin-top: 10px;
-  }
-}
-
-.main-info__icons-text {
-  margin-right: 10px;
-}
-
-.main-info__icons-text-descr {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  padding-right: 0px;
-}
-
-@media (min-width: 768px) and (max-width: 1119px) {
-  .main-info__cps {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    font-size: 14px;
-    margin-top: 25px;
-    margin-right: 25px;
-    margin-left: 16px;
-  }
-
-  .head__info-left-disp768::before {
-    content: "";
-    /* display: block; */
-    width: 1px;
-    background-color: #eaeaea;
-    /* border: 1px solid; */
-    height: 35px;
-    position: relative;
-    left: 25px;
-    bottom: 10px;
-  }
-
-  .main-info {
-    margin-right: 15px;
-  }
-
-  .main-info__text {
-    margin: 0;
-    width: 312px;
-  }
-
-  .main-info__photo {
-    width: 360px;
-  }
-
-  .main-info__main-menu {
-    margin-top: 32px;
-  }
-}
-
-.main-info__icons {
-  margin-left: 450px;
-}
-
-.main-info__pic-320 {
-  width: -webkit-fill-available;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-info,
-.head {
-  width: 100%;
-  max-width: 1120px;
-}
-
-/* тут по дефолту прописываешь стили для мобилки */
-body {
-  background-color: green;
-}
-
-@media (min-width: 768px) {
-  .head__info-left::after {
-    display: none;
-  }
-
-  .head__info-right-request::before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    background-color: #eaeaea;
-    /* border: 1px solid; */
-    height: 35px;
-    position: relative;
-    left: -14px;
-    bottom: 10px;
-  }
-
-  .head__info-right-request {
-    margin-left: 20px;
-  }
-
-  .head__info-left::before {
-    content: "";
-    /* display: block; */
-    width: 1px;
-    background-color: #eaeaea;
-    /* border: 1px solid; */
-    height: 35px;
-    position: relative;
-    left: 80px;
-    bottom: 10px;
-  }
-  /* здесь все правила для мобильной версии */
-  body {
-    background-color: tomato;
-  }
-}
-
-@media (min-width: 1120px) {
-  /* здесь все правила для мобильной версии */
-  body {
-    background-color: aqua;
   }
 }
