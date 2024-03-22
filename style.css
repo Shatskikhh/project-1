@@ -192,13 +192,14 @@ a {
   position: absolute;
 }
 
-@media (max-width: 767px) {
-  .head__info-right-disp768,
-  .head__info-chat,
-  .main-info__visible-text,
-  .main-info__hidden-text {
-    display: none;
-  }
+.head__info-right-disp768,
+.head__info-chat {
+  display: none;
+}
+
+.main-info__visible-text,
+.main-info__hidden-text {
+  display: none;
 }
 
 .main-info__pic-768 {
@@ -208,15 +209,15 @@ a {
   max-width: 100%;
 }
 
+.main-info__menu-ul-item:nth-child(1) {
+  display: none;
+}
+
+.main-info__menu-ul-item:nth-child(5) {
+  display: none;
+}
+
 @media (max-width: 1119px) {
-  .main-info__menu-ul-item:nth-child(1) {
-    display: none;
-  }
-
-  .main-info__menu-ul-item:nth-child(5) {
-    display: none;
-  }
-
   .main-info__final-text,
   .main-info__icons {
     display: none;
@@ -291,6 +292,18 @@ body {
 
   body {
     background-color: tomato;
+  }
+
+  main-info__menu-ul-item:nth-child(5) {
+    display: none;
+  }
+
+  .main-info__final-text {
+    display: none;
+  }
+
+  .main-info__hidden-text {
+    display: block;
   }
 
   .main-info {
@@ -380,8 +393,16 @@ body {
 }
 /* здесь все правила для десктопной версии */
 @media (min-width: 1120px) {
-  body {
-    background-color: aqua;
+  .main-info__menu-ul-item:nth-child(5) {
+    display: flex;
+  }
+
+  .main-info__menu-ul-item:nth-child(1) {
+    display: flex;
+  }
+
+  .main-info__final-text {
+    display: block;
   }
 
   .head__info-left-disp768::before {
@@ -397,12 +418,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
+    margin-right: 27px;
+    margin-left: 420px;
+  }
+
+  .main-info__icons-text {
+    margin-left: 25px;
   }
   .head {
     display: none;
   }
   body {
-    background-color: #f8f8f8;
+    background-color: aqua;
   }
   .main-info__menu-ul,
   .main-info__cps {
