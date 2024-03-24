@@ -217,34 +217,28 @@ a {
   display: none;
 }
 
-@media (max-width: 1119px) {
-  .main-info__final-text,
-  .main-info__icons {
-    display: none;
-  }
+.main-info__menu-ul-item:nth-child(2) {
+  color: #b8ffec;
+  border: 2px solid;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  padding: 17px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-top: -7px;
+}
 
-  .main-info__menu-ul-item:nth-child(2) {
-    color: #b8ffec;
-    border: 2px solid;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0px;
-    padding: 17px;
-    height: 40px;
-    box-sizing: border-box;
-    margin-top: -7px;
-  }
+.main-info {
+  border-top: 1px solid;
+  border-color: #b8ffec;
+}
 
-  .main-info {
-    border-top: 1px solid;
-    border-color: #b8ffec;
-  }
-  .main-info__menu-ul {
-    gap: 25.38px;
-    margin-left: 25px;
-  }
+.main-info__menu-ul {
+  gap: 25.38px;
+  margin-left: 25px;
 }
 
 .main-info__icons-text {
@@ -273,14 +267,22 @@ a {
   max-width: 1120px;
 }
 
-/* тут по дефолту прописываешь стили для мобилки */
+.main-info__title::before {
+  content: "";
+  width: 4px;
+  background-color: aqua;
+  height: 35px;
+  position: relative;
+  padding-left: 3px;
+  border-radius: 7px;
+}
+
 body {
-  background-color: green;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* здесь все правила для планшетной версии */
+
 @media (min-width: 768px) {
   .head__info-left::after {
     display: none;
@@ -290,11 +292,20 @@ body {
     min-width: 768px;
   }
 
-  body {
-    background-color: tomato;
+  .main-info__title {
+    justify-content: start;
   }
 
-  main-info__menu-ul-item:nth-child(5) {
+  .main-info__title::before {
+    margin-left: 7px;
+    padding-left: 0px;
+  }
+
+  .main-info__icons {
+    display: none;
+  }
+
+  .main-info__menu-ul-item:nth-child(5) {
     display: none;
   }
 
@@ -368,7 +379,6 @@ body {
     display: inline-block;
     width: 1px;
     background-color: #eaeaea;
-    /* border: 1px solid; */
     height: 35px;
     position: relative;
     left: -14px;
@@ -381,28 +391,34 @@ body {
 
   .head__info-left::before {
     content: "";
-    /* display: block; */
     width: 1px;
     background-color: #eaeaea;
-    /* border: 1px solid; */
     height: 35px;
     position: relative;
     left: 80px;
     bottom: 10px;
   }
 }
-/* здесь все правила для десктопной версии */
+
 @media (min-width: 1120px) {
   .main-info__menu-ul-item:nth-child(5) {
     display: flex;
+  }
+
+  .main-info {
+    border-top: 0px;
   }
 
   .main-info__menu-ul-item:nth-child(1) {
     display: flex;
   }
 
+  .main-info__menu-ul-item:nth-child(2) {
+    border: 0px;
+  }
+
   .main-info__final-text {
-    display: block;
+    display: inline;
   }
 
   .head__info-left-disp768::before {
@@ -428,9 +444,12 @@ body {
   .head {
     display: none;
   }
-  body {
-    background-color: aqua;
+
+  .main-info__title::before {
+    margin-left: 0;
+    padding-left: 0px;
   }
+
   .main-info__menu-ul,
   .main-info__cps {
     margin-left: 33px;
@@ -445,10 +464,6 @@ body {
 
   .main-info__cps {
     margin-top: 0;
-  }
-
-  .main-info__title {
-    margin-left: 0;
   }
 
   .main-info__menu-ul {
