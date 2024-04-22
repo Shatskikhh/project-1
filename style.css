@@ -99,6 +99,8 @@ ul {
 
 .main-info {
   background-color: #f8f8f8;
+  border-top: 1px solid;
+  border-color: #b8ffec;
 }
 
 .main-info__main-menu {
@@ -112,7 +114,6 @@ ul {
 
 .main-info__title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: 24px;
   white-space: nowrap;
@@ -233,12 +234,6 @@ a {
   margin-bottom: 27px;
   max-width: 100%;
 }
-
-.main-info {
-  border-top: 1px solid;
-  border-color: #b8ffec;
-}
-
 .main-info__menu-ul {
   gap: 25.38px;
   margin-left: 25px;
@@ -248,16 +243,9 @@ a {
   margin-right: 10px;
 }
 
-.main-info__icons-text-descr {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  padding-right: 0px;
-}
-
 .main-info__icons {
   margin-left: 450px;
+  display: none;
 }
 
 .main-info__pic-320 {
@@ -276,7 +264,6 @@ a {
   background-color: aqua;
   height: 35px;
   position: relative;
-  padding-left: 3px;
   border-radius: 7px;
 }
 
@@ -432,6 +419,26 @@ body {
     justify-content: end;
     margin-right: 27px;
     margin-left: 420px;
+  }
+
+  .main-info__icons-text-repair {
+    background-image: url("./images/repair.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+  }
+
+  .main-info__icons-text-status {
+    background-image: url("./images/checkstatus.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
   }
 
   .main-info__icons-text {
